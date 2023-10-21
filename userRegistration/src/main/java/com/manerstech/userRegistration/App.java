@@ -12,7 +12,7 @@ public class App
     public static void main( String[] args )
     {
         userRegister uReg=new userRegister();
-        uReg.setId(101);
+        uReg.setId(102);
         uReg.setName("Rushikesh Mane");
         uReg.setEmail("rushikeshmane@gmail.com");
         uReg.setContactNo("+91-9876543210");
