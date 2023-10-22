@@ -12,27 +12,25 @@ public class App
     public static void main( String[] args )
     {
         employeeRegister emp=new employeeRegister();
-        emp.setId(101);
-        emp.setName("Akash kadam");
-        emp.setEmail("akashkadam@gmail.com");
-        emp.setBalance(32500.98);
-        System.out.println();
         
         Configuration cfg=new Configuration();
         cfg.configure("/com/manerstech/resources/hibernate.cfg.xml");
         
         SessionFactory sessionfactory= cfg.buildSessionFactory();
         Session session= sessionfactory.openSession();
-        
-        Transaction transaction= session.beginTransaction();
+        Transaction transaction= session.beginTransaction(); 
+       
         try {
-        	session.save(emp);
-        	System.out.println("Success...");
+        	emp=session.get(employeeRegister.class, 3);
+        	
+        	
+        	session.delete(emp);
         	transaction.commit();
+        	System.out.println("Success");
         }catch(Exception e) {
         	System.out.println("Failed...");
-        	transaction.rollback();
         	e.printStackTrace();
+        	transaction.rollback();
         }
         finally {
         	session.close();

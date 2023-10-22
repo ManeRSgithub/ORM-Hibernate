@@ -1,10 +1,11 @@
 <!DOCTYPE hibernate-configuration PUBLIC
 	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
 	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
 	<hibernate-configuration>
 		<session-factory>
 			<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-			<property name="connection.url">jdbc:mysql://localhost:3306/demo</property>
+			<property name="connection.url">jdbc:mysql://localhost:3306/userRegister</property>
 			<property name="connection.username">root</property>
 			<property name="connection.password">Bhumi@123</property>
 			
@@ -12,6 +13,6 @@
 			
 			<property name="show_sql">true</property>
 			<property name="format_sql">true</property>
-			<mapping class="com.manerstech.entities.employeeRegister" />
+			<mapping class="com.manerstech.entities.userRegister" />
 		</session-factory>
 	</hibernate-configuration>
