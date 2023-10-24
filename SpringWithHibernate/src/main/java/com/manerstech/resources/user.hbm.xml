@@ -1,0 +1,12 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    	<class name="com.manerstech.entities.User" table="UserDetails">
+    		<id name="id" column="userId" />
+    		<property name="name" column="userName" />
+    		<property name="email" column="userEmail" />
+    		<property name="password" column="userPassword" />
+    	</class>
+    </hibernate-mapping>
